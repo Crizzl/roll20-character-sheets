@@ -7,6 +7,31 @@ https://discord.gg/F24Ka8E
 
 ## Changelog
 
+### Nov 28, 2020
+- Added support for temporary bonuses!
+
+### Nov 25, 2020
+- Changed the header of the talent checkboxes to Talent to make it easier to identify their purpose
+- Fixed a bug where the sheet would reacting to attribute score changes rather than modifiers, which meant attribute changes sometimes did not propagate through to any associated values
+- Fixed a bug where the Bluff/Deception skill wasn't fetching the Special Defense modifier
+
+### Nov 8, 2020
+- Combined the skill roll button with the skill name
+  - Added fancy colors for the new skill roll button so that it matches the stat field when hovered over to help highlight which stat it uses
+- Repurposed the stat modifier display to show the total skill modifier
+- Added sheet workers to update the total skill modifier when relevant values are changed
+
+### Oct 28, 2020
+- Extends the move roll template functionality to make it even easier for players and GMs to resolve attacks
+  - Correctly handles critical hits for high critical hit rate moves such as Slash and Karate Chop being based on the total of the accuracy check, rather than just the raw dice roll
+  - Indicates when moves such as Poison Sting and Thunder Punch should apply their secondary effects 
+- Adds fields to the move section of the character sheet to enable assignment of secondary effects of moves, and declaration of critical hit ranges based on the accuracy roll rather than the individual dice roll
+- Resolves an issue with the total damage bonus not updating when the move fields are changed
+- Resolves an issue with the special defense target text appearing on two lines with the default Roll20 spacing of the chat log
+  - Advice for future incarnations of this is to extend the chat log a little bit; it's hopefully not an issue anymore but only the Sith deal in absolutes...
+- Updates the total damage bonus field, and adds a similar accuracy field, to show the base roll information
+  - The raw total bonus can still be accessed with the correct attributes names
+
 ### Oct 22, 2020
 - Introduces roll templates to the character sheet
 - The skill-roll template is used for skill rolls by Trainer-type characters
@@ -45,9 +70,12 @@ https://discord.gg/F24Ka8E
 - Initial Commit
 
 
-## To do list
-- Display the full bonus to skill checks
-- Allow modifications to movement (maybe just an extra box)
-- Prevent critical range from going below 0 or above 20, maybe do similar to other fields
-- Handle temp stat changes somehow, this may be a lot of work
-- Add a Settings page
+## To-Do:
+Things we want to add to the character sheet, presented in no particular order of priority:
+- [x] ~~Display the full bonus to skill checks~~
+- [x] ~~Handle temporary stat changes somehow, this may be a lot of work~~
+- [x] ~~Prevent critical range from going below 0 or above 20, maybe do similar to other fields~~
+- [ ] Add a Settings page
+- [ ] Allow formula calculations for the extra damage fields
+- [ ] Allow modifications to movement (maybe just an extra box)
+- [ ] Display the adjusted stat score when temporary stat changes are provided
